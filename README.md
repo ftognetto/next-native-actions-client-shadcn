@@ -1,0 +1,4 @@
+- use react api
+- mantain form data (optional you can reset data after submit)
+- Give the action response a shape
+- Form decoder
