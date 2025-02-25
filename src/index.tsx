@@ -1,12 +1,15 @@
-'use client';
+"use client";
 
-import { useField } from '@native-actions/client';
-import React from 'react';
+import { useField } from "@native-actions/client";
+import React from "react";
 
 export function FormLabel({ children }: { children: React.ReactNode }) {
   const field = useField();
   return (
-    <label className={`text-sm font-medium leading-none ${field.invalid && 'text-destructive'}`} htmlFor={field.input.id}>
+    <label
+      className={`text-sm font-medium leading-none ${field.invalid && "text-destructive"}`}
+      htmlFor={field.input.id}
+    >
       {children}
     </label>
   );
@@ -15,7 +18,10 @@ export function FormLabel({ children }: { children: React.ReactNode }) {
 export function FormDescription({ children }: { children: React.ReactNode }) {
   const field = useField();
   return (
-    <p id={field.input.id + '-description'} className="text-sm text-muted-foreground">
+    <p
+      id={field.input.id + "-description"}
+      className="text-sm text-muted-foreground"
+    >
       {children}
     </p>
   );
@@ -28,7 +34,10 @@ export function FormMessage({ children }: { children?: React.ReactNode }) {
     return null;
   }
   return (
-    <p id={field.input.id + '-message'} className={`text-sm font-medium ${error && 'text-destructive'}`}>
+    <p
+      id={field.input.id + "-message"}
+      className={`text-sm font-medium ${error && "text-destructive"}`}
+    >
       {error}
     </p>
   );
